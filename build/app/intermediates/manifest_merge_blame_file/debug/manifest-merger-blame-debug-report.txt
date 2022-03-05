@@ -12,17 +12,17 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/android/app/src/debug/AndroidManifest.xml:6:5-66
-14-->/Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/android/app/src/debug/AndroidManifest.xml:6:22-64
+14-->/Users/lintom/Desktop/smart_photo_album/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/lintom/Desktop/smart_photo_album/android/app/src/debug/AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->[:photo_manager] /Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
-15-->[:photo_manager] /Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+15-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+15-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->[:photo_manager] /Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-80
-16-->[:photo_manager] /Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-77
+16-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-80
+16-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-77
 17    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-17-->[:photo_manager] /Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-80
-17-->[:photo_manager] /Users/lintom/Desktop/Project_Development/Flutter/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-77
+17-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-80
+17-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-77
 18
 19    <application
 20        android:name="android.app.Application"
