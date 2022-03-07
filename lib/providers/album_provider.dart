@@ -2,7 +2,7 @@ import 'dart:typed_data';
 import 'package:flutter/cupertino.dart';
 import 'package:photo_manager/photo_manager.dart';
 
-class album_provider extends ChangeNotifier {
+class album_provider with ChangeNotifier {
   late Uint8List _thumData;
   bool _isLoading = true;
   int index = 0;

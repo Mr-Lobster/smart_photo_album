@@ -3,6 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:photo_manager/photo_manager.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/album_provider.dart';
+import 'package:smart_photo_album/widgets/imageitem_widget.dart';
 
 class AlbumWidget extends StatefulWidget {
   const AlbumWidget({Key? key}) : super(key: key);
@@ -43,7 +44,56 @@ class _AlbumWidgetState extends State<AlbumWidget> {
     if (context.watch<album_provider>().isLoading == true) {
       return const CircularProgressIndicator();
     } else {
-      return Image.memory(context.watch<album_provider>().thumData);
+      //return Image.memory(context.watch<album_provider>().thumData);
+      return Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    children: const [
+                      Expanded(
+                        child: Imageitem(),
+                        flex: 1,
+                      ),
+                      Expanded(
+                        child: Imageitem(),
+                        flex: 1,
+                      ),
+                    ],
+                  ),
+                  flex: 1,
+                ),
+                const Expanded(
+                  child: Imageitem(),
+                  flex: 2,
+                )
+              ],
+            ),
+            flex: 2,
+          ),
+          Expanded(
+            child: Row(
+              children: const [
+                Expanded(
+                  child: Imageitem(),
+                  flex: 1,
+                ),
+                Expanded(
+                  child: Imageitem(),
+                  flex: 1,
+                ),
+                Expanded(
+                  child: Imageitem(),
+                  flex: 1,
+                )
+              ],
+            ),
+            flex: 1,
+          ),
+        ],
+      );
     }
   }
 
