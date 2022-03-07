@@ -1,7 +1,8 @@
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:photo_manager/photo_manager.dart';
+import 'package:provider/provider.dart';
+import 'package:smart_photo_album/providers/album_provider.dart';
 
 class AlbumWidget extends StatefulWidget {
   const AlbumWidget({Key? key}) : super(key: key);
@@ -13,13 +14,18 @@ class AlbumWidget extends StatefulWidget {
 class _AlbumWidgetState extends State<AlbumWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.lightBlueAccent,
-      child: Image.memory(thumData!),
+    return GestureDetector(
+      onTap: () {
+        context.read<album_provider>().suffle_index();
+      },
+      child: Container(
+        color: Colors.lightBlueAccent,
+        child: loadAndShow(context),
+        height: double.infinity,
+        width: double.infinity,
+      ),
     );
   }
-
-  late Uint8List? thumData;
 
   Future<void> request_permission() async {
     //request permission
@@ -31,14 +37,14 @@ class _AlbumWidgetState extends State<AlbumWidget> {
       /// if result is fail, you can call `PhotoManager.openSetting();`  to open android/ios applicaton's setting to get permission
       Fluttertoast.showToast(msg: "授权失败");
     }
-    List<AssetPathEntity> list = await PhotoManager.getAssetPathList();
-    print("------------");
-    print(list.toString());
-    print("------------");
-    var res = await list[0].getAssetListRange(start: 0, end: 1);
-    print(res[0].thumbData);
-    thumData = await res[0].thumbData;
-    print("------------");
+  }
+
+  Widget loadAndShow(BuildContext context) {
+    if (context.watch<album_provider>().isLoading == true) {
+      return const CircularProgressIndicator();
+    } else {
+      return Image.memory(context.watch<album_provider>().thumData);
+    }
   }
 
   @override
