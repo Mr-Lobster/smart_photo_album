@@ -33,99 +33,99 @@ class _AlbumWidgetState extends State<AlbumWidget> {
     if (context.watch<AlbumProvider>().isLoading == true) {
       return const CircularProgressIndicator();
     } else {
-      return Image.memory(context.watch<AlbumProvider>().thumData[0]);
-      // return Column(
-      //   children: [
-      //     Expanded(
-      //       child: Container(
-      //         color: Colors.white,
-      //         child: Row(
-      //           children: [
-      //             Expanded(
-      //               child: Padding(
-      //                 padding: EdgeInsets.fromLTRB(0, 40, 1, 1),
-      //                 child: Container(
-      //                   color: Colors.white,
-      //                   child: Column(
-      //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      //                     children: [
-      //                       Container(
-      //                         child: Imageitem(
-      //                           index: 0,
-      //                         ),
-      //                       ),
-      //                       Container(
-      //                         child: Imageitem(
-      //                           index: 0,
-      //                         ),
-      //                       )
-      //                     ],
-      //                   ),
-      //                 ),
-      //               ),
-      //               flex: 1,
-      //             ),
-      //             Expanded(
-      //               child: Padding(
-      //                 padding: const EdgeInsets.fromLTRB(0, 40, 0, 1),
-      //                 child: Container(
-      //                   color: Colors.white,
-      //                   width: double.infinity,
-      //                   height: double.infinity,
-      //                   child: Imageitem(
-      //                     index: 0,
-      //                   ),
-      //                 ),
-      //               ),
-      //               flex: 2,
-      //             )
-      //           ],
-      //         ),
-      //       ),
-      //       flex: 2,
-      //     ),
-      //     Expanded(
-      //       child: Padding(
-      //         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-      //         child: Container(
-      //           color: Colors.white,
-      //           child: Row(
-      //             children: [
-      //               Expanded(
-      //                 child: Container(
-      //                   color: Colors.white,
-      //                   child: Imageitem(
-      //                     index: 0,
-      //                   ),
-      //                 ),
-      //                 flex: 1,
-      //               ),
-      //               Expanded(
-      //                 child: Container(
-      //                   color: Colors.white,
-      //                   child: Imageitem(
-      //                     index: 0,
-      //                   ),
-      //                 ),
-      //                 flex: 1,
-      //               ),
-      //               Expanded(
-      //                 child: Container(
-      //                   color: Colors.white,
-      //                   child: Imageitem(
-      //                     index: 0,
-      //                   ),
-      //                 ),
-      //                 flex: 1,
-      //               )
-      //             ],
-      //           ),
-      //         ),
-      //       ),
-      //       flex: 1,
-      //     )
-      //   ],
-      // );
+      // return Image.memory(context.watch<AlbumProvider>().thumData[0]);
+      return Column(
+        children: [
+          Expanded(
+            child: Container(
+              color: Colors.white,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 40, 1, 1),
+                      child: Container(
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Imageitem(
+                                index: 0,
+                              ),
+                            ),
+                            Container(
+                              child: Imageitem(
+                                index: 1,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    flex: 1,
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 40, 0, 1),
+                      child: Container(
+                        color: Colors.white,
+                        width: double.infinity,
+                        height: double.infinity,
+                        child: Imageitem(
+                          index: 2,
+                        ),
+                      ),
+                    ),
+                    flex: 2,
+                  )
+                ],
+              ),
+            ),
+            flex: 2,
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: Container(
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                        child: Imageitem(
+                          index: 3,
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                        child: Imageitem(
+                          index: 4,
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                        child: Imageitem(
+                          index: 5,
+                        ),
+                      ),
+                      flex: 1,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            flex: 1,
+          )
+        ],
+      );
     }
   }
 
