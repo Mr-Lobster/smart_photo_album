@@ -3,7 +3,8 @@ import 'package:provider/provider.dart';
 import '../providers/album_provider.dart';
 
 class Imageitem extends StatelessWidget {
-  const Imageitem({Key? key}) : super(key: key);
+  Imageitem({Key? key, this.index = 0}) : super(key: key);
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class Imageitem extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(6),
             child: Image.memory(
-              context.watch<album_provider>().thumData,
+              context.watch<AlbumProvider>().thumData[index],
               fit: BoxFit.cover,
             ),
           ),

@@ -11,7 +11,7 @@ void main() {
       MultiProvider(
     providers: [
       ChangeNotifierProvider(
-        create: (_) => album_provider(),
+        create: (_) => AlbumProvider(),
         lazy: false,
       ),
     ],
