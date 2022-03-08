@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:photo_manager/photo_manager.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/album_provider.dart';
 import 'package:smart_photo_album/widgets/imageitem_widget.dart';
+import 'package:smart_photo_album/utils/request_permission.dart';
 
 class AlbumWidget extends StatefulWidget {
   const AlbumWidget({Key? key}) : super(key: key);
@@ -20,24 +19,12 @@ class _AlbumWidgetState extends State<AlbumWidget> {
         context.read<album_provider>().suffle_index();
       },
       child: Container(
-        color: Colors.lightBlueAccent,
+        color: Colors.white,
         child: loadAndShow(context),
         height: double.infinity,
         width: double.infinity,
       ),
     );
-  }
-
-  Future<void> request_permission() async {
-    //request permission
-    var result = await PhotoManager.requestPermissionExtend();
-    if (result.isAuth) {
-      // success
-    } else {
-      // fail
-      /// if result is fail, you can call `PhotoManager.openSetting();`  to open android/ios applicaton's setting to get permission
-      Fluttertoast.showToast(msg: "授权失败");
-    }
   }
 
   Widget loadAndShow(BuildContext context) {
@@ -48,50 +35,81 @@ class _AlbumWidgetState extends State<AlbumWidget> {
       return Column(
         children: [
           Expanded(
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    children: const [
-                      Expanded(
-                        child: Imageitem(),
-                        flex: 1,
+            child: Container(
+              color: Colors.white,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 40, 1, 1),
+                      child: Container(
+                        color: Colors.white,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Imageitem(),
+                            ),
+                            Container(
+                              child: Imageitem(),
+                            )
+                          ],
+                        ),
                       ),
-                      Expanded(
-                        child: Imageitem(),
-                        flex: 1,
-                      ),
-                    ],
+                    ),
+                    flex: 1,
                   ),
-                  flex: 1,
-                ),
-                const Expanded(
-                  child: Imageitem(),
-                  flex: 2,
-                )
-              ],
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(0, 40, 0, 1),
+                      child: Container(
+                        color: Colors.white,
+                        width: double.infinity,
+                        height: double.infinity,
+                        child: Imageitem(),
+                      ),
+                    ),
+                    flex: 2,
+                  )
+                ],
+              ),
             ),
             flex: 2,
           ),
           Expanded(
-            child: Row(
-              children: const [
-                Expanded(
-                  child: Imageitem(),
-                  flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: Container(
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                        child: Imageitem(),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                        child: Imageitem(),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.white,
+                        child: Imageitem(),
+                      ),
+                      flex: 1,
+                    )
+                  ],
                 ),
-                Expanded(
-                  child: Imageitem(),
-                  flex: 1,
-                ),
-                Expanded(
-                  child: Imageitem(),
-                  flex: 1,
-                )
-              ],
+              ),
             ),
             flex: 1,
-          ),
+          )
         ],
       );
     }
@@ -100,6 +118,6 @@ class _AlbumWidgetState extends State<AlbumWidget> {
   @override
   void initState() {
     super.initState();
-    request_permission();
+    RequestPermission.reqPhotomanagerPermis();
   }
 }

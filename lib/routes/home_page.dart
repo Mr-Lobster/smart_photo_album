@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         resizeToAvoidBottomInset: false, //输入框抵住键盘
         body: Column(
           children: <Widget>[
@@ -17,7 +18,7 @@ class HomePage extends StatelessWidget {
               child: SizedBox(
                 height: MediaQuery.of(context).size.height - 20 - 10,
                 width: MediaQuery.of(context).size.width,
-                //Flex的三个子widget，在垂直方向按2：1：1来占用100像素的空间
+                //Flex的三个子widget
                 child: Flex(
                   direction: Axis.vertical,
                   children: <Widget>[
