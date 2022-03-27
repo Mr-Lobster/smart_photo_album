@@ -45,7 +45,7 @@ class _AlbumWidgetState extends State<AlbumWidget> {
                   width: MediaQuery.of(context).size.width,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(context, CustomRoute(const AlbumsPage()));
+                      Navigator.push(context, CustomRoute(AlbumsPage()));
                     },
                     child: const Text(
                       "更多图集 >",

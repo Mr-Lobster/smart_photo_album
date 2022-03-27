@@ -5,41 +5,13 @@ import 'package:smart_photo_album/widgets/imageitem_widget.dart';
 import '../providers/album_provider.dart';
 import 'package:smart_photo_album/widgets/textunderimg_widget.dart';
 
-class AlbumsPage extends StatefulWidget {
-  const AlbumsPage({Key? key}) : super(key: key);
-
-  @override
-  State<AlbumsPage> createState() => _AlbumsPageState();
-}
-
-class _AlbumsPageState extends State<AlbumsPage> {
-  bool isLoading = true;
+class AlbumsPage extends StatelessWidget {
+  AlbumsPage({Key? key}) : super(key: key);
   late List<Row> albumList;
   late int len;
 
   @override
   Widget build(BuildContext context) {
-    load();
-
-    return Scaffold(
-        appBar: AppBar(
-          elevation: 10,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          backgroundColor: Colors.red,
-          leading: const BackButton(),
-          title: const Text('所有图集'),
-        ),
-        body: isLoading
-            ? Center(
-                child: CircularProgressIndicator(),
-              )
-            : ListView(
-                children: albumList,
-              ));
-  }
-
-  void load() async {
     albumList = [];
     len = context.read<AlbumProvider>().albumLength;
 
@@ -179,12 +151,17 @@ class _AlbumsPageState extends State<AlbumsPage> {
         )); //添加相应的文字描述
       }
     }
-
-    // 延时1s执行返回
-    Future.delayed(Duration(seconds: 1), () {
-      setState(() {
-        isLoading = false;
-      });
-    });
+    return Scaffold(
+        appBar: AppBar(
+          elevation: 10,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          backgroundColor: Colors.red,
+          leading: const BackButton(),
+          title: const Text('所有图集'),
+        ),
+        body: ListView(
+          children: albumList,
+        ));
   }
 }
