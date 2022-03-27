@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/album_provider.dart';
 import 'routes/home_page.dart';
+import 'routes/albums_page.dart';
 
 void main() {
   runApp(
@@ -24,8 +25,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      initialRoute: "/", // 默认加载的界面，这里为RootPage
+      routes: {
+        // 显式声明路由
+        "/": (context) => const HomePage(),
+        "/AlbumsPage": (context) => AlbumsPage(),
+        //Navigator.of(context).pushNamed("/A");
+        //Navigator.pop(context);
+      },
     );
   }
 }

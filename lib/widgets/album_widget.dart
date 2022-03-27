@@ -4,6 +4,8 @@ import 'package:smart_photo_album/providers/album_provider.dart';
 import 'package:smart_photo_album/widgets/imageitem_widget.dart';
 import 'package:smart_photo_album/utils/request_permission.dart';
 
+import '../routes/albums_page.dart';
+import '../utils/route_animation.dart';
 import 'imageitem_widget.dart';
 
 class AlbumWidget extends StatefulWidget {
@@ -35,9 +37,25 @@ class _AlbumWidgetState extends State<AlbumWidget> {
         child: CircularProgressIndicator(),
       );
     } else {
-      // return Image.memory(context.watch<AlbumProvider>().thumData[0]);
       return Column(
         children: [
+          Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 2),
+              child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, CustomRoute(const AlbumsPage()));
+                    },
+                    child: const Text(
+                      "更多图集 >",
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ))),
           Expanded(
             child: Container(
               color: Colors.white,
@@ -45,7 +63,7 @@ class _AlbumWidgetState extends State<AlbumWidget> {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(0, 40, 1, 1),
+                      padding: EdgeInsets.fromLTRB(0, 5, 1, 1),
                       child: Container(
                         color: Colors.white,
                         child: Column(
@@ -53,12 +71,12 @@ class _AlbumWidgetState extends State<AlbumWidget> {
                           children: [
                             Container(
                               child: Imageitem(
-                                index: 0,
+                                index: 1,
                               ),
                             ),
                             Container(
                               child: Imageitem(
-                                index: 1,
+                                index: 2,
                               ),
                             )
                           ],
@@ -69,13 +87,13 @@ class _AlbumWidgetState extends State<AlbumWidget> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 40, 0, 1),
+                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 1),
                       child: Container(
                         color: Colors.white,
                         width: double.infinity,
                         height: double.infinity,
                         child: Imageitem(
-                          index: 2,
+                          index: 0,
                         ),
                       ),
                     ),

@@ -37,17 +37,6 @@ class HomePage extends StatelessWidget {
                       ),
                       flex: 1,
                     ),
-                    // Expanded(
-                    //   flex: 1,
-                    //   child: Container(
-                    //     width: MediaQuery.of(context).size.width,
-                    //     lll
-                    //     child: const Text(
-                    //       "查看全部",
-                    //       textAlign: TextAlign.end,
-                    //     ),
-                    //   ),
-                    // ),
                     const Expanded(
                       flex: 12,
                       child: AlbumWidget(),
