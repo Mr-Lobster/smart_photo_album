@@ -31,7 +31,9 @@ class _AlbumWidgetState extends State<AlbumWidget> {
 
   Widget loadAndShow(BuildContext context) {
     if (context.watch<AlbumProvider>().isLoading == true) {
-      return const CircularProgressIndicator();
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
     } else {
       // return Image.memory(context.watch<AlbumProvider>().thumData[0]);
       return Column(
