@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/album_provider.dart';
 import 'routes/home_page.dart';
 import 'routes/albums_page.dart';
+import 'providers/single_provider.dart';
 
 void main() {
   runApp(

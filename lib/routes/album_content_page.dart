@@ -10,6 +10,7 @@ class AlbumContentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AssetPathEntity asset = context.read<AlbumProvider>().getAlbum(albumIndex);
+
     return Center(
       child: Scaffold(
           appBar: AppBar(
