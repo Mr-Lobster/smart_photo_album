@@ -29,8 +29,7 @@ class Imageitem extends StatelessWidget {
         },
         child: AspectRatio(
             aspectRatio: 1,
-            child: Expanded(
-                child: Padding(
+            child: Padding(
               padding: const EdgeInsets.all(1),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(6),
@@ -39,7 +38,7 @@ class Imageitem extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-            ))),
+            )),
       );
     } else {
       return Container(

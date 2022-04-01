@@ -37,8 +37,7 @@ class _AlbumimageitemState extends State<Albumimageitem> {
               body: Center(
                 child: AspectRatio(
                     aspectRatio: 1,
-                    child: Expanded(
-                        child: Padding(
+                    child: Padding(
                       padding: const EdgeInsets.all(1),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(6),
@@ -47,7 +46,7 @@ class _AlbumimageitemState extends State<Albumimageitem> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                    ))),
+                    )),
               ),
             ); //返回的是需要跳转单页面
           },
@@ -55,8 +54,7 @@ class _AlbumimageitemState extends State<Albumimageitem> {
       },
       child: AspectRatio(
           aspectRatio: 1,
-          child: Expanded(
-              child: Padding(
+          child: Padding(
             padding: const EdgeInsets.all(1),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
@@ -65,7 +63,7 @@ class _AlbumimageitemState extends State<Albumimageitem> {
                 fit: BoxFit.cover,
               ),
             ),
-          ))),
+          )),
     );
   }
 }

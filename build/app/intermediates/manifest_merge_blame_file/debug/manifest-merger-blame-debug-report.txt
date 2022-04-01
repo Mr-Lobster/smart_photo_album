@@ -15,68 +15,71 @@
 14-->/Users/lintom/Desktop/smart_photo_album/android/app/src/debug/AndroidManifest.xml:6:5-66
 14-->/Users/lintom/Desktop/smart_photo_album/android/app/src/debug/AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
-15-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
-16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-80
-16-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-77
-17    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-17-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-80
-17-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-77
-18
-19    <application
-20        android:name="android.app.Application"
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.6.0] /Users/lintom/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/AndroidManifest.xml:24:18-86
-22        android:debuggable="true"
-23        android:icon="@mipmap/ic_launcher"
-24        android:label="smart_photo_album"
-25        android:requestLegacyExternalStorage="true" >
-26        <activity
-27            android:name="com.greenstudio.smart_photo_album.MainActivity"
-28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-29            android:exported="true"
-30            android:hardwareAccelerated="true"
-31            android:launchMode="singleTop"
-32            android:theme="@style/LaunchTheme"
-33            android:windowSoftInputMode="adjustResize" >
-34
-35            <!--
-36                 Specifies an Android theme to apply to this Activity as soon as
-37                 the Android process has started. This theme is visible to the user
-38                 while the Flutter UI initializes. After that, this theme continues
-39                 to determine the Window background behind the Flutter UI.
-40            -->
-41            <meta-data
-42                android:name="io.flutter.embedding.android.NormalTheme"
-43                android:resource="@style/NormalTheme" />
-44
-45            <intent-filter>
-46                <action android:name="android.intent.action.MAIN" />
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-49            </intent-filter>
-50        </activity>
-51        <!--
-52             Don't delete the meta-data below.
-53             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-54        -->
-55        <meta-data
-56            android:name="flutterEmbedding"
-57            android:value="2" />
-58
-59        <uses-library
-59-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-60            android:name="androidx.window.extensions"
-60-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-61            android:required="false" />
-61-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-62        <uses-library
-62-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-63            android:name="androidx.window.sidecar"
-63-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-64            android:required="false" />
-64-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-65    </application>
-66
-67</manifest>
+15-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:4:5-81
+15-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:4:22-78
+16    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+16-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:5:5-75
+16-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:5:22-72
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-80
+17-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-77
+18    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+18-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-80
+18-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-77
+19
+20    <application
+21        android:name="android.app.Application"
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.6.0] /Users/lintom/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+25        android:label="smart_photo_album"
+26        android:requestLegacyExternalStorage="true" >
+27        <activity
+28            android:name="com.greenstudio.smart_photo_album.MainActivity"
+29            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+30            android:exported="true"
+31            android:hardwareAccelerated="true"
+32            android:launchMode="singleTop"
+33            android:theme="@style/LaunchTheme"
+34            android:windowSoftInputMode="adjustResize" >
+35
+36            <!--
+37                 Specifies an Android theme to apply to this Activity as soon as
+38                 the Android process has started. This theme is visible to the user
+39                 while the Flutter UI initializes. After that, this theme continues
+40                 to determine the Window background behind the Flutter UI.
+41            -->
+42            <meta-data
+43                android:name="io.flutter.embedding.android.NormalTheme"
+44                android:resource="@style/NormalTheme" />
+45
+46            <intent-filter>
+47                <action android:name="android.intent.action.MAIN" />
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+50            </intent-filter>
+51        </activity>
+52        <!--
+53             Don't delete the meta-data below.
+54             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+55        -->
+56        <meta-data
+57            android:name="flutterEmbedding"
+58            android:value="2" />
+59
+60        <uses-library
+60-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+61            android:name="androidx.window.extensions"
+61-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+62            android:required="false" />
+62-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+63        <uses-library
+63-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+64            android:name="androidx.window.sidecar"
+64-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+65            android:required="false" />
+65-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+66    </application>
+67
+68</manifest>
