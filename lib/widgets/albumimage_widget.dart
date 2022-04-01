@@ -2,7 +2,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/single_provider.dart';
-
+import 'package:smart_photo_album/routes/detailed_page.dart';
 //图库里面的照片
 
 class Albumimageitem extends StatefulWidget {
@@ -23,32 +23,7 @@ class _AlbumimageitemState extends State<Albumimageitem> {
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) {
-            return Scaffold(
-              appBar: AppBar(
-                elevation: 10,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                backgroundColor: Colors.red,
-                leading: const BackButton(),
-                title: const Text(
-                  "图片展示",
-                ),
-              ),
-              body: Center(
-                child: AspectRatio(
-                    aspectRatio: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.all(1),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(6),
-                        child: Image.memory(
-                          thumData,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    )),
-              ),
-            ); //返回的是需要跳转单页面
+            return DetailedPage(Image_Index: widget.Img_index); //返回的是需要跳转单页面
           },
         ));
       },
