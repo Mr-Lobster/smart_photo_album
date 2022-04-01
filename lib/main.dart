@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/album_provider.dart';
+import 'package:smart_photo_album/utils/request_permission.dart';
 import 'routes/home_page.dart';
 import 'routes/albums_page.dart';
 import 'providers/single_provider.dart';
+import 'utils/request_permission.dart';
 
 void main() {
   runApp(
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    RequestPermission.reqPhotomanagerPermis();
     return MaterialApp(
       initialRoute: "/", // 默认加载的界面，这里为RootPage
       routes: {

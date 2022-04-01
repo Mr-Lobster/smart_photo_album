@@ -29,7 +29,7 @@ class SingleProvider with ChangeNotifier {
     //初始默认加载20张
     List<AssetEntity> entities =
         await Albumasset.getAssetListPaged(current_page++, 20);
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < entities.length; i++) {
       Uint8List? temp = await entities[i].thumbData;
       thumData.add(temp!);
     }
@@ -41,10 +41,13 @@ class SingleProvider with ChangeNotifier {
   void getMoreData() async {
     List<AssetEntity> entities =
         await Albumasset.getAssetListPaged(current_page++, 20);
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < entities.length; i++) {
       Uint8List? temp = await entities[i].thumbData;
       thumData.add(temp!);
     }
-    notifyListeners();
+    //1秒后
+    Future.delayed(const Duration(milliseconds: 3000), () {
+      notifyListeners();
+    });
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -40,7 +38,7 @@ class AlbumContentPage extends StatelessWidget {
                         itemBuilder: (context, index) {
                           if (context.watch<SingleProvider>().thumData.length <=
                               index) {
-                            context.watch<SingleProvider>().getMoreData();
+                            context.read<SingleProvider>().getMoreData();
                             return const Center(
                               child: CircularProgressIndicator(),
                             );

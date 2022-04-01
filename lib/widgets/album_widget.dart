@@ -22,12 +22,13 @@ class _AlbumWidgetState extends State<AlbumWidget> {
       onTap: () {
         //context.read<album_provider>().suffle_index();
       },
-      child: Container(
-        color: Colors.white,
-        child: loadAndShow(context),
-        height: double.infinity,
-        width: double.infinity,
-      ),
+      // child: Container(
+      //   color: Colors.white,
+      //   child: loadAndShow(context),
+      //   height: double.infinity,
+      //   width: double.infinity,
+      // ),
+      child: loadAndShow(context),
     );
   }
 
@@ -69,15 +70,11 @@ class _AlbumWidgetState extends State<AlbumWidget> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              child: Imageitem(
-                                index: 1,
-                              ),
+                            Imageitem(
+                              index: 1,
                             ),
-                            Container(
-                              child: Imageitem(
-                                index: 2,
-                              ),
+                            Imageitem(
+                              index: 2,
                             )
                           ],
                         ),

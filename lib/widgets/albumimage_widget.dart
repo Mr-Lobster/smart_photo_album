@@ -30,7 +30,7 @@ class _AlbumimageitemState extends State<Albumimageitem> {
                     borderRadius: BorderRadius.circular(20)),
                 backgroundColor: Colors.red,
                 leading: const BackButton(),
-                title: Text(
+                title: const Text(
                   "图片展示",
                 ),
               ),
