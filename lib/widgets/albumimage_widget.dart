@@ -6,8 +6,10 @@ import 'package:smart_photo_album/routes/detailed_page.dart';
 //图库里面的照片
 
 class Albumimageitem extends StatefulWidget {
-  Albumimageitem({Key? key, required this.Img_index}) : super(key: key);
-  late int Img_index;
+  Albumimageitem({Key? key, required this.albumIndex, required this.imgIndex})
+      : super(key: key);
+  int imgIndex;
+  int albumIndex;
 
   @override
   State<Albumimageitem> createState() => _AlbumimageitemState();
@@ -18,12 +20,16 @@ class _AlbumimageitemState extends State<Albumimageitem> {
 
   @override
   Widget build(BuildContext context) {
-    thumData = context.read<SingleProvider>().thumData[widget.Img_index];
+    thumData = context.watch<SingleProvider>().thumData[widget.imgIndex];
+
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) {
-            return DetailedPage(Image_Index: widget.Img_index); //返回的是需要跳转单页面
+            return DetailedPage(
+              albumIndex: widget.albumIndex,
+              imgIndex: widget.imgIndex,
+            ); //返回的是需要跳转单页面
           },
         ));
       },

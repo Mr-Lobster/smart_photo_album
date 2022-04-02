@@ -48,7 +48,8 @@ class _AlbumContentPageState extends State<AlbumContentPage> {
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : Albumimageitem(
-              Img_index: 0,
+              albumIndex: 0,
+              imgIndex: 0,
             ),
     ));
   }

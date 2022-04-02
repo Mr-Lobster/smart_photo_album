@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/album_provider.dart';
 import 'package:smart_photo_album/widgets/imageitem_widget.dart';
 import 'package:smart_photo_album/utils/request_permission.dart';
-
 import '../routes/albums_page.dart';
 import '../utils/route_animation.dart';
 import 'imageitem_widget.dart';

@@ -4,7 +4,6 @@ import 'package:smart_photo_album/providers/album_provider.dart';
 import 'package:smart_photo_album/utils/request_permission.dart';
 import 'routes/home_page.dart';
 import 'routes/albums_page.dart';
-import 'providers/single_provider.dart';
 import 'utils/request_permission.dart';
 
 void main() {

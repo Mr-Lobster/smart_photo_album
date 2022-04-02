@@ -38,7 +38,7 @@ class AlbumContentPage extends StatelessWidget {
                               child: CircularProgressIndicator(),
                             );
                           }
-                          return Albumimageitem(Img_index: index);
+                          return Albumimageitem(albumIndex: 0, imgIndex: index);
                         },
                         itemCount: context.read<SingleProvider>().albumLength,
                       ))));
