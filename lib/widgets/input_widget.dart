@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import '../routes/response_page.dart';
 
 class TextviewWidget extends StatefulWidget {
   const TextviewWidget({Key? key}) : super(key: key);
@@ -29,12 +30,17 @@ class _TextviewWidgetState extends State<TextviewWidget> {
       padding: const EdgeInsets.all(5),
       child: TextField(
         onSubmitted: (value) {
-          if (kDebugMode) {
-            print(value);
-          }
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) {
+              var input = _controller.text.toString();
+              return ResponsePage(queryStr: input); //返回的是需要跳转单页面
+            },
+          ));
         },
         controller: _controller,
         textInputAction: TextInputAction.search,
+        maxLines: 1,
+        maxLength: 38,
         decoration: InputDecoration(
           suffixIcon: InkWell(
               borderRadius: BorderRadius.circular(16.0),
@@ -44,9 +50,12 @@ class _TextviewWidgetState extends State<TextviewWidget> {
               highlightColor: Colors.black,
               // 点击时的背景色（高亮色）
               onTap: () {
-                if (kDebugMode) {
-                  print(_controller.text.toString());
-                }
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    var input = _controller.text.toString();
+                    return ResponsePage(queryStr: input); //返回的是需要跳转单页面
+                  },
+                ));
               },
               // 点击事件
               child: const Icon(
