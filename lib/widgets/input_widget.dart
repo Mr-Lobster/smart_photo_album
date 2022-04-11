@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_photo_album/routes/search_page.dart';
+import 'package:smart_photo_album/utils/route_animation.dart';
 import '../routes/response_page.dart';
 
 class TextviewWidget extends StatefulWidget {
@@ -12,9 +14,12 @@ class TextviewWidget extends StatefulWidget {
 class _TextviewWidgetState extends State<TextviewWidget> {
   late TextEditingController _controller;
 
+  FocusNode _commentFocus = FocusNode();
+
   @override
   void initState() {
     super.initState();
+    _commentFocus.unfocus(); // 失去焦点
     _controller = TextEditingController();
   }
 
@@ -26,8 +31,9 @@ class _TextviewWidgetState extends State<TextviewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5),
+    return GestureDetector(
+        child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       child: TextField(
         onSubmitted: (value) {
           Navigator.of(context).push(MaterialPageRoute(
@@ -40,7 +46,7 @@ class _TextviewWidgetState extends State<TextviewWidget> {
         controller: _controller,
         textInputAction: TextInputAction.search,
         maxLines: 1,
-        maxLength: 38,
+        // maxLength: 38,
         decoration: InputDecoration(
           suffixIcon: InkWell(
               borderRadius: BorderRadius.circular(16.0),
@@ -72,6 +78,6 @@ class _TextviewWidgetState extends State<TextviewWidget> {
               borderRadius: BorderRadius.all(Radius.circular(100))),
         ),
       ),
-    );
+    ));
   }
 }

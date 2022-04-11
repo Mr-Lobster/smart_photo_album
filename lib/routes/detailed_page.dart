@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:photo_manager/photo_manager.dart';
+import 'package:pinch_zoom_image_last/pinch_zoom_image_last.dart';
 
 class DetailedPage extends StatefulWidget {
   DetailedPage({Key? key, required this.albumIndex, required this.imgIndex})
@@ -60,18 +61,15 @@ class _DetailedPageState extends State<DetailedPage> {
         child: isLoading
             ? CircularProgressIndicator()
             : isImg
-                ? AspectRatio(
-                    aspectRatio: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.all(1),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(6),
-                        child: Image.memory(
-                          originBytes,
-                          fit: BoxFit.cover,
-                        ),
+                ? Center(
+                    child: PinchZoomImage(
+                      image: Image.memory(
+                        originBytes,
+                        fit: BoxFit.cover,
                       ),
-                    ))
+                      zoomedBackgroundColor: Color.fromRGBO(240, 240, 240, 1.0),
+                    ),
+                  )
                 : const Text("抱歉目前本应用仅支持展示普通图片"),
       ),
     );

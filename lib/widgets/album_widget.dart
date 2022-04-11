@@ -63,7 +63,7 @@ class _AlbumWidgetState extends State<AlbumWidget> {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(0, 5, 1, 1),
+                      padding: const EdgeInsets.fromLTRB(0, 5, 1, 1),
                       child: Container(
                         color: Colors.white,
                         child: Column(

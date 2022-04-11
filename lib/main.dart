@@ -37,6 +37,14 @@ class MyApp extends StatelessWidget {
         //Navigator.of(context).pushNamed("/A");
         //Navigator.pop(context);
       },
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.blue,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.red,
+      ),
     );
   }
 }

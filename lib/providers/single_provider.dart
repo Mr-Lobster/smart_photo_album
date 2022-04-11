@@ -33,7 +33,7 @@ class SingleProvider with ChangeNotifier {
       Uint8List? temp = await entities[i].thumbData;
       thumData.add(temp!);
     }
-
+    // Fluttertoast.showToast(msg: albumLength.toString());
     _isLoading = false;
     notifyListeners();
   }

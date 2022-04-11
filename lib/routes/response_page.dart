@@ -1,10 +1,9 @@
 import 'dart:convert';
-import 'dart:typed_data';
-import 'dart:convert';
-import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:smart_photo_album/widgets/imageitem_widget.dart';
+import 'package:smart_photo_album/widgets/responseimage_widget.dart';
 
 class ResponsePage extends StatefulWidget {
   ResponsePage({Key? key, required this.queryStr}) : super(key: key);
@@ -17,15 +16,16 @@ class ResponsePage extends StatefulWidget {
 class _ResponsePageState extends State<ResponsePage> {
   bool isLoading = true;
   late Response response;
-  late String base64;
+  late List<dynamic> base64;
 
   void getHttp() async {
     try {
       var dio = Dio();
 
-      response = await dio.get('http://10.32.92.214:5003/infer',
+      response = await dio.get('http://10.32.86.180:5003/infer',
           queryParameters: {'str': widget.queryStr});
       base64 = response.data;
+      //print(base64[0].toString());
       setState(() {
         isLoading = false;
       });
@@ -53,15 +53,22 @@ class _ResponsePageState extends State<ResponsePage> {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           backgroundColor: Colors.red,
           leading: const BackButton(),
-          title: const Text(
-            "搜索结果: ",
-          ),
+          title: const Text("搜索结果"),
         ),
         body: Center(
           child: isLoading
               ? const CircularProgressIndicator()
-              : Image.memory(
-                  base64Decode(base64),
+              : GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, //每行三列
+                    childAspectRatio: 1.0, //显示区域宽高相等
+                  ),
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Responseimage(
+                        thumData: base64Decode(base64[index].toString()));
+                    // return Text("$index");
+                  },
                 ),
         ));
   }

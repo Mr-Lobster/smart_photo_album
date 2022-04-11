@@ -1,0 +1,70 @@
+appName: "太南课表"
+
+push:
+  channelName: "课程提醒"
+  channelDesc: "在即将上课时, 提醒学生下节课的内容"
+
+loginPage:
+  title: "南京工业大学"
+  loading: "教务系统加载中"
+
+schedulePage:
+  weekNo: "第{index}周"
+  nowDate: "{year}年{month}月{day}日\t{weekday}\t{hour}:{minute}"
+  studyYear: "{studyYearStart}~{studyYearEnd}学年\t第{termCode}学期"
+  studyTerm: "开学时间: {termStartDate} 放假时间: {termEndDate}"
+  nowWeek: "当前周"
+  previewWeek: "正在预览"
+  morning: "上午"
+  afternoon: "下午"
+  night: "晚上"
+  syncFailure: "课表同步失败"
+  tokenExpired:
+    content: "用户登录凭证已过期, 需要重新获取登录凭证才能继续同步课表. 
+    太南课表具备强大的课表离线能力, 无需时刻在线同步教务最新课表. 
+    您可以在需要的时候再重新进行课表同步. 
+    是否重新进行登录验证?"
+    btnCancel: "不用了"
+    btnConfirm: "重新登录"
+  networkFailure:
+    content: "网络连接失败. 请不要慌张, 只是您当前的网络状况似乎不太行. 请检查您的网络连接后再尝试重新同步课表."
+    btnConfirm: "确定"
+
+settingsPage:
+  title: "设置"
+  logOut: "退出登录"
+  aboutApp: "关于此应用"
+  appTheme: "应用主题"
+  useSummerTime: "使用夏季作息"
+  nowUsingSummerTime: "当前使用夏季作息"
+  nowUsingWinterTime: "当前使用冬季作息"
+  pushNotification: "推送通知"
+  functionUnavailable: "功能暂未开放"
+
+aboutAppPage:
+  title: "关于此应用"
+  version: "版本号"
+  buildNumber: "编译版本"
+
+directTranslate:
+  weekday:
+    monday: "周一"
+    tuesday: "周二"
+    wednesday: "周三"
+    thursday: "周四"
+    friday: "周五"
+    saturday: "周六"
+    sunday: "周日"
+  month:
+    janurary: "元月"
+    feburary: "二月"
+    march: "三月"
+    april: "四月"
+    may: "五月"
+    june: "六月"
+    july: "七月"
+    august: "八月"
+    september: "九月"
+    october: "十月"
+    november: "十一月"
+    december: "十二月"

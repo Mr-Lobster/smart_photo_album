@@ -12,99 +12,111 @@
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:9:5-67
-14-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:9:22-64
+14-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:9:5-67
+14-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:9:22-64
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:4:5-81
-15-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:4:22-78
+15-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:4:5-81
+15-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:4:22-78
 16    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
-16-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:5:5-75
-16-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:5:22-72
+16-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:5:5-75
+16-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:5:22-72
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:4:5-81
-17-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:4:22-78
+17-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:4:5-81
+17-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:4:22-78
 18    <uses-permission android:name="android.permission.CAMERA" />
-18-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:7:5-65
-18-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:7:22-62
+18-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:7:5-65
+18-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:7:22-62
 19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-19-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:8:5-75
-19-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:8:22-72
+19-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:8:5-75
+19-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:8:22-72
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-20-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:10:5-79
-20-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:10:22-76
+20-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:10:5-79
+20-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:10:22-76
 21    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-21-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:11:5-76
-21-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:11:22-73
-22    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-22-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:8:5-75
-22-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:8:22-72
-23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-23-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:10:5-79
-23-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:10:22-76
-24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-24-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:11:5-76
-24-->/Users/lintom/Desktop/smart_photo_album/android/app/src/main/AndroidManifest.xml:11:22-73
-25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-25-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-80
-25-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-77
-26    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-26-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-80
-26-->[:photo_manager] /Users/lintom/Desktop/smart_photo_album/build/photo_manager/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-77
-27
-28    <application
-29        android:name="android.app.Application"
-30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.6.0] /Users/lintom/.gradle/caches/transforms-2/files-2.1/122df2e57d294d1a53db26bbc3b813c1/core-1.6.0/AndroidManifest.xml:24:18-86
-31        android:debuggable="true"
-32        android:icon="@mipmap/ic_launcher"
-33        android:label="太南相册"
-34        android:requestLegacyExternalStorage="true"
-35        android:usesCleartextTraffic="true" >
-36        <activity
-37            android:name="com.greenstudio.smart_photo_album.MainActivity"
-38            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-39            android:exported="true"
-40            android:hardwareAccelerated="true"
-41            android:launchMode="singleTop"
-42            android:theme="@style/LaunchTheme"
-43            android:windowSoftInputMode="adjustResize" >
-44
-45            <!--
-46                 Specifies an Android theme to apply to this Activity as soon as
-47                 the Android process has started. This theme is visible to the user
-48                 while the Flutter UI initializes. After that, this theme continues
-49                 to determine the Window background behind the Flutter UI.
-50            -->
-51            <meta-data
-52                android:name="io.flutter.embedding.android.NormalTheme"
-53                android:resource="@style/NormalTheme" />
-54
-55            <intent-filter>
-56                <action android:name="android.intent.action.MAIN" />
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-59            </intent-filter>
-60        </activity>
-61        <!--
-62             Don't delete the meta-data below.
-63             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-64        -->
-65        <meta-data
-66            android:name="flutterEmbedding"
-67            android:value="2" />
-68
-69        <uses-library
-69-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-70            android:name="androidx.window.extensions"
-70-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-71            android:required="false" />
-71-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-72        <uses-library
-72-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-73            android:name="androidx.window.sidecar"
-73-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-74            android:required="false" />
-74-->[androidx.window:window:1.0.0-beta04] /Users/lintom/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-75    </application>
-76
-77</manifest>
+21-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:11:5-76
+21-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:11:22-73
+22    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+22-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:12:5-76
+22-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:12:22-74
+23    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+23-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:8:5-75
+23-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:8:22-72
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:10:5-79
+24-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:10:22-76
+25    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+25-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:11:5-76
+25-->C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\android\app\src\main\AndroidManifest.xml:11:22-73
+26    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+26-->[:photo_manager] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\photo_manager\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-80
+26-->[:photo_manager] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\photo_manager\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-77
+27    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+27-->[:photo_manager] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\photo_manager\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-80
+27-->[:photo_manager] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\photo_manager\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-77
+28
+29    <application
+30        android:name="android.app.Application"
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.6.0] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\122df2e57d294d1a53db26bbc3b813c1\core-1.6.0\AndroidManifest.xml:24:18-86
+32        android:debuggable="true"
+33        android:icon="@mipmap/ic_launcher"
+34        android:label="太南相册"
+35        android:requestLegacyExternalStorage="true"
+36        android:usesCleartextTraffic="true" >
+37        <activity
+38            android:name="com.greenstudio.smart_photo_album.MainActivity"
+39            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+40            android:exported="true"
+41            android:hardwareAccelerated="true"
+42            android:launchMode="singleTop"
+43            android:theme="@style/LaunchTheme"
+44            android:windowSoftInputMode="adjustResize" >
+45
+46            <!--
+47                 Specifies an Android theme to apply to this Activity as soon as
+48                 the Android process has started. This theme is visible to the user
+49                 while the Flutter UI initializes. After that, this theme continues
+50                 to determine the Window background behind the Flutter UI.
+51            -->
+52            <meta-data
+53                android:name="io.flutter.embedding.android.NormalTheme"
+54                android:resource="@style/NormalTheme" />
+55
+56            <intent-filter>
+57                <action android:name="android.intent.action.MAIN" />
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+60            </intent-filter>
+61        </activity>
+62        <!--
+63             Don't delete the meta-data below.
+64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+65        -->
+66        <meta-data
+67            android:name="flutterEmbedding"
+68            android:value="2" />
+69
+70        <activity
+70-->[:url_launcher_android] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+71            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+71-->[:url_launcher_android] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+72            android:exported="false"
+72-->[:url_launcher_android] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+73            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+73-->[:url_launcher_android] C:\Users\Tom_Lin\Desktop\csdesign\smart_photo_album\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+74
+75        <uses-library
+75-->[androidx.window:window:1.0.0-beta04] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+76            android:name="androidx.window.extensions"
+76-->[androidx.window:window:1.0.0-beta04] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+77            android:required="false" />
+77-->[androidx.window:window:1.0.0-beta04] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+78        <uses-library
+78-->[androidx.window:window:1.0.0-beta04] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+79            android:name="androidx.window.sidecar"
+79-->[androidx.window:window:1.0.0-beta04] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+80            android:required="false" />
+80-->[androidx.window:window:1.0.0-beta04] C:\Users\Tom_Lin\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+81    </application>
+82
+83</manifest>

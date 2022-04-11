@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_photo_album/providers/single_provider.dart';
 import '../providers/album_provider.dart';
-import '../routes/album_content_page4.dart';
+import '../routes/album_content_page.dart';
 
 //图库的封面
 class Imageitem extends StatelessWidget {

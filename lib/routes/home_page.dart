@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:smart_photo_album/routes/search_page.dart';
 import 'package:smart_photo_album/widgets/album_widget.dart';
 import 'package:smart_photo_album/widgets/input_widget.dart';
 import 'package:smart_photo_album/widgets/title_widget.dart';
+import 'package:smart_photo_album/routes/setting_page.dart';
+
+import '../utils/route_animation.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -23,22 +27,40 @@ class HomePage extends StatelessWidget {
                   direction: Axis.vertical,
                   children: <Widget>[
                     Expanded(
-                      flex: 7,
+                      child: ListTile(
+                        trailing: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, CustomRoute(SettingPage()));
+                          },
+                          child: const Icon(Icons.sort),
+                        ),
+                      ),
+                      flex: 1,
+                    ),
+                    Expanded(
+                      flex: 8,
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         color: Colors.white,
                         child: const TitleWidget(),
                       ),
                     ),
-                    const Expanded(
+                    Expanded(
                       child: Material(
                         color: Colors.white,
-                        child: TextviewWidget(),
+                        //child: TextviewWidget(),
+                        child: GestureDetector(
+                          child: TextviewWidget(),
+                          onTap: () {
+                            Navigator.of(context)
+                                .push(CustomRoute(const SearchPage()));
+                          },
+                        ),
                       ),
-                      flex: 1,
+                      flex: 2,
                     ),
                     const Expanded(
-                      flex: 12,
+                      flex: 13,
                       child: AlbumWidget(),
                     ),
                   ],
