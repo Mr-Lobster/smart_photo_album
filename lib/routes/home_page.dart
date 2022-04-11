@@ -50,7 +50,19 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                         //child: TextviewWidget(),
                         child: GestureDetector(
-                          child: TextviewWidget(),
+                          // child: const TextviewWidget(),
+                          child: const ListTile(
+                            leading: Text(
+                              "Search ...",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
+                            ),
+                            trailing: Icon(
+                              Icons.search,
+                              color: Colors.black,
+                            ),
+                          ),
                           onTap: () {
                             Navigator.of(context)
                                 .push(CustomRoute(const SearchPage()));

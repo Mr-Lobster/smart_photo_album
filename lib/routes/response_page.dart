@@ -6,8 +6,10 @@ import 'package:smart_photo_album/widgets/imageitem_widget.dart';
 import 'package:smart_photo_album/widgets/responseimage_widget.dart';
 
 class ResponsePage extends StatefulWidget {
-  ResponsePage({Key? key, required this.queryStr}) : super(key: key);
+  ResponsePage({Key? key, required this.queryStr, this.mode = 0})
+      : super(key: key);
   String queryStr;
+  int mode = 0;
 
   @override
   State<ResponsePage> createState() => _ResponsePageState();
@@ -23,7 +25,7 @@ class _ResponsePageState extends State<ResponsePage> {
       var dio = Dio();
 
       response = await dio.get('http://10.32.86.180:5003/infer',
-          queryParameters: {'str': widget.queryStr});
+          queryParameters: {'str': widget.queryStr, 'mode': widget.mode});
       base64 = response.data;
       //print(base64[0].toString());
       setState(() {
