@@ -40,10 +40,8 @@ class AlbumContentPage extends StatelessWidget {
                           context.watch<SingleProvider>().thumData.length) {
                         if (index ==
                             context.watch<SingleProvider>().albumLength) {
-                          return const Expanded(
-                            child: Center(
-                              child: Text("加载完毕"),
-                            ),
+                          return const Center(
+                            child: Text("加载完毕"),
                           );
                         } else {
                           context.watch<SingleProvider>().getMoreData();
