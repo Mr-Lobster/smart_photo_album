@@ -68,7 +68,7 @@ class SettingPageState extends State<SettingPage> {
                         title: Text(
                           "应用名称",
                         ),
-                        trailing: Text("跨模态检索相册"),
+                        trailing: Text("万物检索相册"),
                       ),
                       const Divider(height: 0),
                       const ListTile(

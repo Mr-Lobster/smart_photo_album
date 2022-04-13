@@ -31,7 +31,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="跨模态检索相册"
+        android:label="万物检索相册"
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true" >
         <activity

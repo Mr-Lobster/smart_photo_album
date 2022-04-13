@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:smart_photo_album/routes/response_page.dart';
 
 class SearchPage extends StatefulWidget {
@@ -12,6 +13,7 @@ class _SearchPageState extends State<SearchPage> {
   int current_search = 0;
   late TextEditingController _controller;
   var _radioGroupValue = '万物检索';
+  var _radioGroupValue2 = '云计算';
   List<String> advice = [
     "一名男子穿着白灰色条纹衬衫，一条绿色裤子和一双鞋",
     "那个男人留着短发。他肌肉发达，穿着一件白色条纹的绿色背心。他穿着绿色的裤子。他脖子上挂着粉色的耳机。他手里拿着一个杯子。",
@@ -69,7 +71,15 @@ class _SearchPageState extends State<SearchPage> {
                   height: 50,
                   child: TextField(
                     controller: _controller,
-                    onSubmitted: (value) {
+                    onSubmitted: (value) async {
+                      if (_radioGroupValue2 == "本地计算") {
+                        Fluttertoast.showToast(
+                          msg: "本地计算加载中.....",
+                        );
+                        await Future.delayed(const Duration(seconds: 3), () {
+                          Fluttertoast.showToast(msg: "本地计算组件加载完毕");
+                        });
+                      }
                       if (_radioGroupValue == "万物检索") {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
@@ -106,7 +116,16 @@ class _SearchPageState extends State<SearchPage> {
                           // 溅墨色（波纹色）
                           highlightColor: Colors.black,
                           // 点击时的背景色（高亮色）
-                          onTap: () {
+                          onTap: () async {
+                            if (_radioGroupValue2 == "本地计算") {
+                              Fluttertoast.showToast(
+                                msg: "本地计算加载中.....",
+                              );
+                              await Future.delayed(const Duration(seconds: 3),
+                                  () {
+                                Fluttertoast.showToast(msg: "本地计算组件加载完毕");
+                              });
+                            }
                             if (_radioGroupValue == "万物检索") {
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) {
@@ -141,7 +160,14 @@ class _SearchPageState extends State<SearchPage> {
                 height: 50,
                 //width: MediaQuery.of(context).size.width - 10,
                 child: Container(
-                  child: _buildEditable(),
+                  child: _buildEditable1(),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+                //width: MediaQuery.of(context).size.width - 10,
+                child: Container(
+                  child: _buildEditable2(),
                 ),
               ),
               const SizedBox(
@@ -193,7 +219,7 @@ class _SearchPageState extends State<SearchPage> {
         ));
   }
 
-  _buildEditable() {
+  _buildEditable1() {
     return Row(
       children: <Widget>[
         Expanded(
@@ -221,7 +247,40 @@ class _SearchPageState extends State<SearchPage> {
             title: const Text("人物检索"),
           ),
           flex: 1,
-        )
+        ),
+      ],
+    );
+  }
+
+  _buildEditable2() {
+    return Row(
+      children: <Widget>[
+        Expanded(
+          child: RadioListTile(
+            value: '云计算',
+            groupValue: _radioGroupValue2,
+            onChanged: (value) {
+              setState(() {
+                _radioGroupValue2 = value.toString();
+              });
+            },
+            title: const Text("云计算"),
+          ),
+          flex: 1,
+        ),
+        Expanded(
+          child: RadioListTile(
+            value: '本地计算',
+            groupValue: _radioGroupValue2,
+            onChanged: (value) {
+              setState(() {
+                _radioGroupValue2 = value.toString();
+              });
+            },
+            title: const Text("本地计算"),
+          ),
+          flex: 1,
+        ),
       ],
     );
   }
